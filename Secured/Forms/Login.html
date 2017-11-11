@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../Scripts/jquery-3.2.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../JS/MecJSFunction.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="one">
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Melody and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../../index.html">Melody</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">About us <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Services</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Products.html">Mobile</a></li>
+                                    <li><a href="Products.html">Tablets</a></li>
+                                    <li><a href="Products.html">Laptop</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="Products.html">Apps</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" />
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Download</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Account</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Live Chat</a></li>
+                                    <li><a href="#">Phone support</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Secured/Forms/Login.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <div class="two">
+        <div class="container" style="padding-top: 60px;">
+            <div class="col-lg-8 col-sm-2 col-xs-1">
+                <div class="col-lg-10 col-sm-2 col-xs-1">
+                    <div id="CarouselLogin" class="carousel slide" data-interval="2500" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#CarouselLogin" data-slide-to="0" class="active"></li>
+                            <li data-target="#CarouselLogin" data-slide-to="1"></li>
+                            <li data-target="#CarouselLogin" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <asp:hyperlink id="HyperLink1" runat="server" target="_blank">
+                                <img id="imgAdsA1" runat="server" src="../../Resources/q1.png" alt="Advertisement" />
+                            </asp:hyperlink>
+                            </div>
+                            <div class="item">
+                                <asp:hyperlink id="HyperLink2" runat="server" target="_blank">
+                                <img id="imgAdsA2" runat="server" src="../../Resources/q2.png" alt="Advertisement" />
+                            </asp:hyperlink>
+
+                            </div>
+                            <div class="item">
+                                <asp:hyperlink id="HyperLink3" runat="server" target="_blank">
+                                <img id="imgAdsA3" runat="server" src="../../Resources/q3.jpg" alt="Advertisement" />
+                            </asp:hyperlink>
+
+                            </div>
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="left carousel-control" href="#CarouselLogin" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#CarouselLogin" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-8 col-xs-10 loginPanel">
+                <h3 id="Result" class="hidden"></h3>
+                <div class="form-horizontal">
+                    <div class="well well-lg">
+                        <h3>Log in to your account</h3>
+                        <p>&nbsp;</p>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <asp:textbox id="txtLoginUserName" runat="server" type="text" class="form-control" placeholder="Email"></asp:textbox>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:textbox id="txtLoginPassword" runat="server" type="password" class="form-control" placeholder="Password"></asp:textbox>
+                            </div>
+                        </div>
+                        <p style="font-size: 10px" class="text-right">
+                            <a href="#" class="PasswordRecoveryBtn"><i>Forget password?</i></a>
+                        </p>
+                        <div class="form-group">
+                            <button id="btnLogin" runat="server" class="btn btn-primary col-xs-12"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Log in</button>
+                        </div>
+                        <hr />
+                        <p class="text-center">
+                            Don't have an account?<a href="#" class="SignupBtn">&nbsp;Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-8 col-xs-10 PasswordRecoveryPanel">
+                <div class="form-horizontal">
+                    <div class="well well-lg">
+                        <h3>Password Recovery</h3>
+                        <p>&nbsp;</p>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <asp:textbox id="txtPasswordRecoveryEmail" runat="server" type="text" class="form-control" placeholder="Email"></asp:textbox>
+                            </div>
+
+                        </div>
+                        <p style="font-size: 10px" class="text-right">
+                            <a href="#" class="BackToLoginBtn"><i><u>Back to login</u></i></a>
+                        </p>
+                        <div class="form-group">
+                            <button id="txtPasswordRecoverySubmit" runat="server" class="btn btn-primary col-xs-12">Recover my password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-8 col-xs-10 signupPanel">
+                <div class="form-horizontal">
+                    <div class="well well-lg">
+                        <h3>New to us? Sign up now!</h3>
+                        <div class="form-group">
+                            <button class="btn btn-primary col-xs-12" scope="public_profile,email,user_friends">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                &nbsp;Continue with Facebook
+                            </button>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <asp:textbox id="txtSignUpName" runat="server" type="text" class="form-control" placeholder="Name"></asp:textbox>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <asp:textbox id="txtSignUpEmail" runat="server" type="text" class="form-control" placeholder="Email"></asp:textbox>
+                            </div>
+                        </div>
+                        <div class="form-group" style="padding-top: 2px;">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:textbox id="txtSignUpPassword" runat="server" type="password" class="form-control" placeholder="Password"></asp:textbox>
+                            </div>
+                        </div>
+                        <div class="form-group" style="padding-top: 2px;">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:textbox id="txtSignUpConfirmPassword" runat="server" type="password" class="form-control" placeholder="Confirm Password"></asp:textbox>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button id="btnSignUp" class="btn btn-primary col-xs-12" runat="server">Sign Up</button>
+                        </div>
+                        <hr />
+                        <p class="text-center">
+                            Have an account?<a href="#" class="LoginBtn">&nbsp;Log in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="three">
+        <div class="btmFooter">
+            <footer class="footer">
+                <nav class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-2 col-lg-3">
+                                <span>
+                                    <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                                </span>&copy; Melody. All Right Reserved.
+                            </div>
+                            <div class="col-xs-3 col-sm-2 col-lg-1">
+                                <a href="#">Facebook</a>
+                            </div>
+                            <div class="col-xs-3 col-sm-2 col-lg-1">
+                                <a href="#">Twitter</a>
+                            </div>
+                            <div class="col-xs-3 col-sm-2 col-lg-2">
+                                <a href="#">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
+
+        </div>
+
+    </div>
+</body>
+</html>
